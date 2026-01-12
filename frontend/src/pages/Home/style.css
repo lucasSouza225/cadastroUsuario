@@ -1,0 +1,230 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    flex-direction: column;
+}
+
+h1 {
+    color: #fff;
+    font-size: 28px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #2d3d4e;
+    max-width: 50%;
+    width: 400px;
+    margin-bottom: 20px;
+
+    & bUtton {
+        border-radius: 20px;
+        background-color: #61c0ff;
+        color: rgb(32, 32, 32);
+        border: none;
+        height: 40px;
+        cursor: pointer;
+        transition: .3s;
+        font-weight: bold;
+    }
+    
+    & bUtton:hover {
+        opacity: .7;
+    }
+
+    & input {
+        border: 1px solid #48456c;
+        border-radius: 20px;
+        height: 40px;
+        background-color: #d6d6d6;
+        font-size: 16px;
+        padding-left: 12px;
+        outline: none;
+    }
+}
+
+h2 {
+    color: #fff;
+    padding: 30px 0;
+}
+
+/* Estilo para cards de usuários */
+.users-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 4rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Card individual */
+.user-card {
+    margin-bottom: 30px;
+    width: 400px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: #e0e0e0;
+}
+
+/* Cabeçalho do card (opcional, caso queira adicionar um título) */
+.user-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.user-info {
+  flex-grow: 1;
+}
+
+/* Informações do usuário */
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.user-details p {
+  margin: 0;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.4;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.user-details p:last-child {
+  border-bottom: none;
+}
+
+.user-details p::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #6a11cb;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.user-label {
+  font-weight: 600;
+  color: #333;
+  min-width: 60px;
+  display: inline-block;
+}
+
+.user-value {
+  color: #555;
+  font-weight: 500;
+}
+
+/* Botão de deletar */
+.delete-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ffeaea;
+  border: none;
+  color: #ff4444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.delete-btn:hover {
+  background-color: #ff4444;
+  color: white;
+  transform: scale(1.1);
+}
+
+.delete-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Indicador de idade (opcional) */
+.age-indicator {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background-color: #e8f4ff;
+  color: #2575fc;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .users-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .user-card {
+    padding: 1.2rem;
+  }
+}
+
+/* Efeito de foco para acessibilidade */
+.delete-btn:focus {
+  outline: 2px solid #2575fc;
+  outline-offset: 2px;
+}
+
+/* Animações para novos cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-card {
+  animation: fadeIn 0.4s ease-out;
+}
