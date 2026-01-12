@@ -42,3 +42,20 @@ post -> criar
 put -> editar vários
 patch -> editar um
 delete -> deletar
+
+
+Thunder Client é uma extensão do VS Code usada para testar APIs REST de forma rápida e simples, sem precisar de ferramentas externas como o Postman.
+
+Explicação curta:
+
+O Thunder Client permite enviar requisições HTTP (GET, POST, PUT, DELETE, etc.) diretamente pelo VS Code para testar sua API. Com ele, você consegue:
+
+Enviar dados em JSON
+
+Testar rotas do backend
+
+Ver respostas e status HTTP
+
+Simular chamadas de frontend para o backend
+
+É muito usado em projetos Node.js, Express, APIs REST e Prisma, porque agiliza o desenvolvimento e os testes.
