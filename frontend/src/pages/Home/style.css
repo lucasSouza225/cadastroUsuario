@@ -3,11 +3,14 @@
     align-items: center;
     padding-top: 100px;
     flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 h1 {
     color: #fff;
     font-size: 28px;
+    text-align: center;
 }
 
 form {
@@ -17,9 +20,10 @@ form {
     padding: 30px;
     border-radius: 10px;
     background-color: #2d3d4e;
-    max-width: 50%;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 
     & bUtton {
         border-radius: 20px;
@@ -30,6 +34,7 @@ form {
         cursor: pointer;
         transition: .3s;
         font-weight: bold;
+        width: 100%;
     }
     
     & bUtton:hover {
@@ -44,180 +49,397 @@ form {
         font-size: 16px;
         padding-left: 12px;
         outline: none;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
 h2 {
     color: #fff;
     padding: 30px 0;
+    text-align: center;
 }
 
 /* Estilo para cards de usuários */
 .users-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 4rem;
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
+
 /* Card individual */
 .user-card {
-    margin-bottom: 30px;
-    width: 400px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-  position: relative;
-  border: 1px solid #f0f0f0;
-  overflow: hidden;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .user-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  border-color: #e0e0e0;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: #e0e0e0;
 }
 
-/* Cabeçalho do card (opcional, caso queira adicionar um título) */
+/* Cabeçalho do card */
 .user-card-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.2rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #f5f5f5;
+    flex-wrap: wrap;
 }
 
 .user-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-right: 1rem;
-  flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
 }
 
 .user-info {
-  flex-grow: 1;
+    flex-grow: 1;
+    min-width: 200px;
 }
 
 /* Informações do usuário */
 .user-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 .user-details p {
-  margin: 0;
-  padding: 0.5rem 0;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  line-height: 1.4;
-  border-bottom: 1px solid #f8f8f8;
+    margin: 0;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    line-height: 1.4;
+    border-bottom: 1px solid #f8f8f8;
+    word-break: break-word;
 }
 
 .user-details p:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .user-details p::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #6a11cb;
-  margin-right: 10px;
-  flex-shrink: 0;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #6a11cb;
+    margin-right: 10px;
+    margin-top: 8px;
+    flex-shrink: 0;
 }
 
 .user-label {
-  font-weight: 600;
-  color: #333;
-  min-width: 60px;
-  display: inline-block;
+    font-weight: 600;
+    color: #333;
+    min-width: 60px;
+    display: inline-block;
 }
 
 .user-value {
-  color: #555;
-  font-weight: 500;
+    color: #555;
+    font-weight: 500;
+    flex: 1;
+    min-width: 0;
 }
 
 /* Botão de deletar */
 .delete-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #ffeaea;
-  border: none;
-  color: #ff4444;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  padding: 0;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ffeaea;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 0;
 }
 
 .delete-btn:hover {
-  background-color: #ff4444;
-  color: white;
-  transform: scale(1.1);
+    background-color: #ff4444;
+    color: white;
+    transform: scale(1.1);
 }
 
 .delete-btn svg {
-  width: 18px;
-  height: 18px;
+    width: 18px;
+    height: 18px;
 }
 
-/* Indicador de idade (opcional) */
+/* Indicador de idade */
 .age-indicator {
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  background-color: #e8f4ff;
-  color: #2575fc;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  margin-left: 0.5rem;
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background-color: #e8f4ff;
+    color: #2575fc;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    white-space: nowrap;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .users-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .user-card {
-    padding: 1.2rem;
-  }
+/* Estados */
+.deleting {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.deleting-text {
+    font-size: 12px;
+}
+
+.delete-btn {
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover:not(:disabled) {
+    background-color: #ff4444;
+    transform: scale(1.05);
+}
+
+.error {
+    color: #ff4444;
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.user-id {
+    font-size: 12px;
+    color: #666;
 }
 
 /* Efeito de foco para acessibilidade */
 .delete-btn:focus {
-  outline: 2px solid #2575fc;
-  outline-offset: 2px;
+    outline: 2px solid #2575fc;
+    outline-offset: 2px;
 }
 
 /* Animações para novos cards */
 @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-card {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Responsividade - Telas médias (tablets) */
+@media (max-width: 1024px) {
+    .container {
+        padding-top: 80px;
+    }
+    
+    .users-container {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    .user-card {
+        padding: 1.2rem;
+    }
+}
+
+/* Responsividade - Telas pequenas (tablets pequenos e celulares grandes) */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 60px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 0.5rem;
+    }
+    
+    form {
+        padding: 20px;
+        gap: 20px;
+        width: 95%;
+    }
+    
+    h2 {
+        font-size: 22px;
+        padding: 20px 0;
+    }
+    
+    .users-container {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 0.5rem;
+    }
+    
+    .user-card {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    
+    .user-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .user-avatar {
+        margin-right: 0;
+        margin-bottom: 0.8rem;
+    }
+    
+    .user-info {
+        width: 100%;
+    }
+    
+    .user-details p {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+    .user-details p::before {
+        margin-bottom: 5px;
+    }
+    
+    .user-label {
+        margin-bottom: 5px;
+        min-width: auto;
+    }
+}
+
+/* Responsividade - Telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+    .container {
+        padding-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    form {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    h2 {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+    
+    .users-container {
+        padding: 0.25rem;
+        gap: 1rem;
+    }
+    
+    .user-card {
+        padding: 0.8rem;
+    }
+    
+    .user-details p {
+        font-size: 0.9rem;
+    }
+    
+    .delete-btn {
+        width: 32px;
+        height: 32px;
+        top: 0.8rem;
+        right: 0.8rem;
+    }
+    
+    .delete-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .age-indicator {
+        font-size: 0.75rem;
+        margin-left: 0.3rem;
+    }
+}
+
+/* Para telas muito grandes */
+@media (min-width: 1600px) {
+    .users-container {
+        max-width: 1400px;
+    }
+}
+
+/* Estilo para mensagem de erro */
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid #c62828;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+}
+
+.error-message svg {
+  flex-shrink: 0;
+}
+
+@keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
@@ -225,6 +447,13 @@ h2 {
   }
 }
 
-.user-card {
-  animation: fadeIn 0.4s ease-out;
+/* Estilo para campos inválidos (opcional) */
+input:invalid {
+  border-color: #c62828;
+}
+
+/* Adicione foco visível para acessibilidade */
+input:focus {
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
 }
